@@ -7,6 +7,7 @@
             <mat-radio-button *ngFor="let item of option.options" [value]="item.value">{{item.label}}</mat-radio-button>
           </mat-radio-group>
       </div>
+      <app-message [type]="type" [message]="message" *ngIf="form.invalid"></app-message>
       <div class="buttons">
         <button type="button" mat-button color="primary" (click)="onSubmit()">Ordernar</button>
         <button type="button" style="padding-top: 5px;" mat-button color="primary" (click)="reset()">Limpar</button>

@@ -5,7 +5,8 @@ import { Option } from 'src/app/core/models/option';
 import { OptionService } from 'src/app/core/services/option.service';
 import { Sort } from 'src/app/core/models/sort';
 import { SortService } from 'src/app/core/services/sort.service';
-import { AuthorValidator, TitleValidator } from 'src/app/core/validators/book-validador';
+import { AuthorValidator, TitleValidator, YearValidator } from 'src/app/core/validators/book-validador';
+import { MessageType } from 'src/app/core/enums/message-type';
 
 @Component({
   selector: 'app-book-sort-options',
@@ -15,6 +16,8 @@ import { AuthorValidator, TitleValidator } from 'src/app/core/validators/book-va
 export class BookSortOptionsComponent  extends PageBase implements OnInit, OnDestroy{
   form: FormGroup | null = null;
   options: Option[] = [];
+  message: string = 'Selecione pelo menos um item';
+  type: MessageType = MessageType.Error;
   @Output() submit: EventEmitter<Sort> = new EventEmitter<Sort>()
 
   constructor(private fb: FormBuilder,
@@ -36,7 +39,7 @@ export class BookSortOptionsComponent  extends PageBase implements OnInit, OnDes
   createForm(){
     this.form = this.fb.group({
       authorName: [null, AuthorValidator()],
-      editionYear: [null],
+      editionYear: [null, YearValidator()],
       title: [null,TitleValidator()]
     })
   }
@@ -51,15 +54,23 @@ export class BookSortOptionsComponent  extends PageBase implements OnInit, OnDes
   }
 
   onSubmit(){
+    console.log(this.form)
     if(this.form?.invalid){
       Object.keys(this.form)
             .forEach((controlName)=> this.form?.get(controlName)?.markAsTouched())
       return;
     }
 
+
+
+    if(this.form?.invalid){
+      return;
+    }
     const sort = this.prepareSort();
     this.submit.emit(sort);
   }
+
+ 
 
   private prepareSort() : Sort{
     return new Sort(this.form?.get('title')?.value, this.form?.get('authorName')?.value,  this.form?.get('editionYear')?.value);
