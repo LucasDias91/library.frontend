@@ -1,1 +1,30 @@
-/* You can add global styles to this file, and also import other style files */
+@import "./styles/material.scss" ;
+@import "./styles/base.scss" ;
+@import "./styles/theme.scss" ;
+
+
+
+::ng-deep .mat-form-field-wrapper{
+    margin-bottom: -1.25em !important;
+ }
+
+ ::ng-deep .mat-form-field-appearance-outline .mat-form-field-infix {
+    padding: 0.7em 0 1em 0;
+}
+
+
+//mat-input focused color
+::ng-deep .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+    color: var(--color-primary) !important;
+}
+
+// mat-label focused style
+::ng-deep .mat-form-field-appearance-outline:hover .mat-form-field-outline {
+    color: var(--color-primary) !important;
+}
+
+// mat-label focused style
+::ng-deep .mat-form-field.mat-focused .mat-form-field-label {
+    color: var(--color-primary) !important;
+}
+

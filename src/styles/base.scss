@@ -1,0 +1,24 @@
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.wrapper{
+    max-width: 1400px;
+    margin: auto;
+    padding-top: 10px;
+}
+
+.no-margin{
+  margin: 0px !important;
+}
+
+.no-padding{
+  padding: 0px !important;
+}
+
+.invert-color{
+  filter: invert(100%);
+  -webkit-filter: invert(100%);
+}

@@ -1,0 +1,29 @@
+mat-radio-group {
+    display: flex;
+    flex-direction:column;
+    mat-radio-button{
+        width: 100%;
+    }
+}
+
+.row{
+    margin-top: 65px;
+    min-height: 500px;
+}
+
+.option{
+    padding-top: 15px;
+}
+
+h4{
+    padding-top: 10px;;
+    font-size: 18px;
+}
+
+button{
+    width: 100%;
+}
+
+.buttons{
+    padding-top: 15px;
+}

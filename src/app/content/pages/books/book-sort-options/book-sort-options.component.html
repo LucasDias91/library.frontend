@@ -1,0 +1,16 @@
+<div class="row" *ngIf="form">
+    <h4>Ordernar por:</h4>
+     <form  [formGroup]="form">
+      <div *ngFor="let option of options" class="option">
+        <label>{{option.label}}</label>
+        <mat-radio-group [formControlName]="option.key" >
+            <mat-radio-button *ngFor="let item of option.options" [value]="item.value">{{item.label}}</mat-radio-button>
+          </mat-radio-group>
+      </div>
+      <div class="buttons">
+        <button type="button" mat-button color="primary" (click)="onSubmit()">Ordernar</button>
+        <button type="button" style="padding-top: 5px;" mat-button color="primary" (click)="reset()">Limpar</button>
+      </div>
+     </form>
+</div>
+
