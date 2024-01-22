@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BookFilterComponent } from './book-sort-options.component';
+import { BookSortOptionsComponent } from './book-sort-options.component';
 
-describe('BookFilterComponent', () => {
-  let component: BookFilterComponent;
-  let fixture: ComponentFixture<BookFilterComponent>;
+describe('BookSortOptionsComponent', () => {
+  let component: BookSortOptionsComponent;
+  let fixture: ComponentFixture<BookSortOptionsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BookFilterComponent ]
+      declarations: [ BookSortOptionsComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(BookFilterComponent);
+    fixture = TestBed.createComponent(BookSortOptionsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
