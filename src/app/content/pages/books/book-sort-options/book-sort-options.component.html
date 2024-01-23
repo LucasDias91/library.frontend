@@ -19,7 +19,7 @@
       <app-message [type]="type" [message]="message" *ngIf="form.invalid && message"></app-message>
       <div class="buttons">
         <button type="button" class="btn-primary button-mobile" mat-stroked-button (click)="onSubmit()">Ordernar</button>
-        <button class="button-mobile" style="padding-top: 5px;" mat-button color="primary" (click)="reset()">Limpar</button>
+        <button type="button" class="button-mobile" style="padding-top: 5px;" mat-button color="primary" (click)="reset()">Limpar</button>
       </div>
      </form>
   </div>
