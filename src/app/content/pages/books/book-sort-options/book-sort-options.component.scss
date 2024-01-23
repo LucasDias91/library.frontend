@@ -25,6 +25,7 @@ mat-radio-group {
 h4{
     padding-top: 10px;;
     font-size: 18px;
+  //  padding-left: 15px ;
     font-family: 'Poppins Medium';
 }
 
@@ -63,12 +64,14 @@ button{
 }
 
 .box{
-    padding-left: 10px;
+    padding-left: 0px;
     margin-top:65px;
+    padding-right: 15px;
 }
 
 button{
-    font-size: 15px
+    font-size: 15px;
+    width: 150px;
 }
 
 @import "./../../../../../styles/base.scss" ;
