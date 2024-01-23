@@ -33,7 +33,7 @@ export class BookSortOptionsComponent  extends PageBase implements OnInit, OnDes
     this.createForm();
     this.getOptions();
     this.menu();
-    console.log("OIT")
+    this.isMobile = window.screen.width < 804
   }
 
 

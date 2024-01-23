@@ -13,6 +13,7 @@ mat-radio-group {
 
 .option{
     padding-top: 5px !important;
+    padding-left: 10px;
     label{
         font-size: 15px;
     }
@@ -33,6 +34,12 @@ button{
 
 .buttons{
     padding-top: 15px;
+    padding-left: 15px ;
+    padding-right: 15px;
+}
+
+.content{
+    width: 260px !important;
 }
 
 .header{
@@ -68,7 +75,7 @@ button{
 
 @media only screen and (max-width: $mobile-width) {
     h4{
-        padding-top: 15px;
+        //padding-top: 15px;
         padding-left: 10px;
     }
     .option{
@@ -94,6 +101,18 @@ button{
             padding-left: 10px;
             color: white;
         }
+    }
+
+    .box{
+        margin-top: 10px !important;
+        padding: 0px !important;
+    }
+
+    .buttons{
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+        text-align: center;
+        width: 100%;
     }
     
 }
