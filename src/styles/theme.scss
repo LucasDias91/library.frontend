@@ -1,5 +1,19 @@
+@font-face {   
+    font-family: 'Poppins Light';    //This is what we are going to call
+    src: url('../assets/fonts/poppins/Poppins-Light.ttf');
+  }
+  
+  @font-face {   
+    font-family: 'Poppins Medium';    //This is what we are going to call
+    src: url('../assets/fonts/poppins/Poppins-Medium.ttf');
+  }
+  * {
+    font-family: 'Poppins', sans-serif;
+  }
+  
+
 :root {
-    --color-primary: #00cdac;
+    --color-primary: #07ccab;
     --gradient: linear-gradient(-20deg, #00cdac 0%, #8ddad5 100%);
     --color-menu: #FFFFFF;
     --color-description: rgb(144,144,144);
@@ -7,3 +21,59 @@
 } 
 
 
+#btn-menu {
+    width: 30px;
+    height: 30px;
+    cursor:pointer;
+    background-image: url('./../assets/images/theme/menu-aberto.png');
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: cover !important;
+    background-color: transparent;
+    border-color: transparent;
+    filter: invert(100%);
+    -webkit-filter: invert(100%);
+    z-index: 10;
+  }
+
+  .header{
+    height: 80px;
+    background-image: var(--gradient);
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0; 
+    z-index: 1;
+    display: flex;
+}
+
+
+#btn-cancel{
+    width: 20px;
+    height: 20px;
+    cursor:pointer;
+    background-image: url('./../assets/images/theme/cancel.png');
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: cover !important;
+    background-color: transparent;
+    border-color: transparent;
+    //invert color image
+    filter: invert(100%);
+    -webkit-filter: invert(100%);
+  }
+
+  .avatar{
+    margin-left: 5px;
+    filter: invert(100%);
+    -webkit-filter: invert(100%);
+  }
+
+
+  .btn-primary {
+    color: var(--color-primary) !important;
+    border-color: var(--color-primary) !important;
+  }
+
+  .btn-clean{
+
+  }

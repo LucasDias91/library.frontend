@@ -1,0 +1,27 @@
+
+
+@import "./../../../../styles/base.scss" ;
+
+@media only screen and (max-width: $mobile-width) {
+    .hidden{
+       display: none !important;
+    }
+    .painel{
+        grid-template-columns: 100%  !important;
+        app-book-sort-options{
+            width: 0px !important;
+        }
+    }
+}
+
+.options{
+    min-width: 250px;
+}
+
+.painel{
+    display: grid;
+    grid-template-columns: 220px calc(100% - 220px);
+    grid-column-gap: 10px;
+    grid-row-gap: 15px;
+    margin-top: 30px;
+}

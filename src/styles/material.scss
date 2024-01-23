@@ -1,3 +1,4 @@
+
 @use '@angular/material' as mat;
 @include mat.core();
 $library-primary: mat.define-palette(mat.$indigo-palette);
@@ -12,6 +13,22 @@ $library-theme: mat.define-light-theme((
 ));
 @include mat.all-component-themes($library-theme);
 
+@import "theme.scss" ;
 
 
+.mdc-form-field>label {
+  padding-left: 0px !important;
 
+}
+
+.mat-mdc-radio-button.mat-accent {
+  --mdc-radio-selected-focus-icon-color: var(--color-primary) !important;
+  --mdc-radio-selected-hover-icon-color:  var(--color-primary) !important;
+  --mdc-radio-selected-icon-color:  var(--color-primary) !important;
+  --mdc-radio-selected-pressed-icon-color:  var(--color-primary) !important;
+  --mat-mdc-radio-checked-ripple-color:  var(--color-primary) !important;
+}
+
+.mdc-form-field {
+  height: 27px !important;
+}

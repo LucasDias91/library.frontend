@@ -1,17 +1,28 @@
-<div class="row" *ngIf="form">
+
+<div id="option-painel" [ngClass]="{'sidenav': isMobile}">
+  <div class="header">
+    <div class="item">
+      <img class="avatar" width="35" height="35" src="./../../../../../assets/images/theme/user.png">
+      <label>Olá, Visitante!</label>
+    </div>
+    <button (click)="close()"  id="btn-cancel"></button>
+  </div>
+  <div class="box">
     <h4>Ordernar por:</h4>
-     <form  [formGroup]="form">
+     <form  [formGroup]="form" *ngIf="form">
       <div *ngFor="let option of options" class="option">
         <label>{{option.label}}</label>
         <mat-radio-group [formControlName]="option.key" >
             <mat-radio-button *ngFor="let item of option.options" [value]="item.value">{{item.label}}</mat-radio-button>
           </mat-radio-group>
       </div>
-      <app-message [type]="type" [message]="message" *ngIf="form.invalid"></app-message>
+      <app-message [type]="type" [message]="message" *ngIf="form.invalid && message"></app-message>
       <div class="buttons">
-        <button type="button" mat-button color="primary" (click)="onSubmit()">Ordernar</button>
+        <button type="button" class="btn-primary" mat-stroked-button (click)="onSubmit()">Ordernar</button>
         <button type="button" style="padding-top: 5px;" mat-button color="primary" (click)="reset()">Limpar</button>
       </div>
      </form>
+  </div>
+
 </div>
 

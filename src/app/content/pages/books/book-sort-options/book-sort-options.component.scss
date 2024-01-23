@@ -12,12 +12,19 @@ mat-radio-group {
 }
 
 .option{
-    padding-top: 15px;
+    padding-top: 5px !important;
+    label{
+        font-size: 15px;
+    }
+    mat-radio-group{
+        font-size: 15px;
+    }
 }
 
 h4{
     padding-top: 10px;;
     font-size: 18px;
+    font-family: 'Poppins Medium';
 }
 
 button{
@@ -27,3 +34,68 @@ button{
 .buttons{
     padding-top: 15px;
 }
+
+.header{
+    display: none;
+
+    
+ 
+}
+.sidenav {
+    height: 100%; 
+    width: 0; 
+    position: fixed; 
+    z-index: 99999; 
+    top: 0; 
+    left: 0;
+    background-color: white; 
+    overflow-x: auto; 
+    transition: 0.5s; 
+    color: var(--color-text);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px
+}
+
+.box{
+    padding-left: 10px;
+    margin-top:65px;
+}
+
+button{
+    font-size: 15px
+}
+
+@import "./../../../../../styles/base.scss" ;
+
+@media only screen and (max-width: $mobile-width) {
+    h4{
+        padding-top: 15px;
+        padding-left: 10px;
+    }
+    .option{
+        display: block !important;
+        text-wrap: nowrap;
+        padding-left: 10px;
+    }
+    .header{
+        padding-left: 10px;
+        padding-right: 10px;
+        justify-content: space-between;
+        align-items: center;
+        display: flex !important;
+    }
+    .item{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding-left: 10px;
+        text-wrap: nowrap;
+        justify-content: space-between;
+        label{
+            padding-left: 10px;
+            color: white;
+        }
+    }
+    
+}
+
+

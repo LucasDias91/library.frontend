@@ -25,7 +25,7 @@ const routes: Routes = [
     BooksComponent,
     BookListComponent,
     BookSortOptionsComponent,
-    BookComponent
+    BookComponent,
   ],
   imports: [
     RouterModule.forChild(routes),

@@ -24,6 +24,7 @@ export function TitleValidator() {
         editionYearControl.updateValueAndValidity();
       }
 
+
       if(control.value == null && authNameControl.value == null && editionYearControl.value == null){
         return {invalid: true}
       }
@@ -39,7 +40,7 @@ export function TitleValidator() {
       }
       var  editionYearControl = control.parent.get('editionYear') as FormControl;
       var  titleControl = control.parent.get('title') as FormControl;
-      if(editionYearControl.value){
+      if(editionYearControl.value && control.value){
         editionYearControl.setValue(null);
       }
 
@@ -75,7 +76,6 @@ export function TitleValidator() {
       if(control.value != null && authNameControl.invalid){
         authNameControl.updateValueAndValidity();
       }
-
       if(control.value == null && authNameControl.value == null && titleControl.value == null){
         return {invalid: true}
       }

@@ -1,9 +1,49 @@
+@import "./../../../../../styles/base.scss" ;
+
 h1{
     text-align: center;
     margin-top: 20px;
     font-size: 30px;
+    font-family: 'Poppins Medium';
 }
 
 app-book{
     padding-top: 15px;
+    //width: 100%;
+}
+
+.books{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    padding-left: 10px;
+  
+}
+
+
+@media only screen and (max-width: 1300px) {
+    .books{
+      
+    }
+}
+
+@media only screen and (max-width: 1080px) {
+    .books{
+      
+    }
+}
+
+@media only screen and (max-width: $mobile-width) {
+    .books{
+        //grid-column-gap: 13px;
+        grid-template-columns: 100% !important;
+        align-items: start !important;
+        width: 100% !important;
+    }
+    app-book{
+      //  padding-top: 15px;
+        width: 100% !important;
+    }
 }
