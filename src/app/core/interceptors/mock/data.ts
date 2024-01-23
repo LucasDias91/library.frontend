@@ -18,9 +18,3 @@ export function GetOptions(){
     options.push(new Option('editionYear', "Ano"));
     return options;
 }
-
-export function GetPages(){
-    var pages: Page[] = [];
-    pages.push(new Page(1,'Livros', '/Books'));
-    return pages;
-}

@@ -3,7 +3,7 @@ import { HttpRequest, HttpResponse, HttpHandler, HttpEvent, HttpInterceptor, HTT
 import { Observable, of } from 'rxjs';
 import { delay } from 'rxjs/operators';
 import { Sort } from '../models/sort';
-import { GetBooks, GetOptions, GetPages } from './mock/data';
+import { GetBooks, GetOptions } from './mock/data';
 
 @Injectable()
 export class FakeBackendInterceptor implements HttpInterceptor {
@@ -14,8 +14,6 @@ export class FakeBackendInterceptor implements HttpInterceptor {
             switch (true) {
                 case url.endsWith('/books') && method === 'GET':
                     return ok(GetBooks());
-                case url.endsWith('/pages') && method === 'GET':
-                    return ok(GetPages());
                 case url.endsWith('/options') && method === 'GET':
                     return ok(GetOptions());
                  case url.endsWith('/sort') && method === 'POST':

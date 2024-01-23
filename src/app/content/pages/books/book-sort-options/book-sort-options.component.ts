@@ -68,8 +68,12 @@ export class BookSortOptionsComponent  extends PageBase implements OnInit, OnDes
     if(this.form?.invalid){
       return;
     }
+    
     const sort = this.prepareSort();
     this.submit.emit(sort);
+    if(this.isMobile){
+      this.close();
+    }
   }
 
   private prepareSort() : Sort{
